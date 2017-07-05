@@ -103,9 +103,9 @@
 
 У каждой сцены имеется панель операций:
     
-    * посмотреть проекцию сцены на местности
-    * просмотреть разреженное изображение сцены (preview)
-    * посмотреть метаданные сцены
+    * посмотреть проекцию сцены на местности,
+    * просмотреть разреженное изображение сцены (preview),
+    * посмотреть метаданные сцены,
     * скачать сцену и др.
 
 Для пользователей, не выполнивших вход в программу, часть операций будет недоступна. Выберем 
@@ -113,11 +113,11 @@
 будет отображен диалог выбора типа продукта. В зависимости от типа КА выбор может
 отличаться. В случае Landsat 8 будет следующий список:
      
-     * LandsatLook "Natural Color" Image (7.4 MB)
-     * LandsatLook "Thermal" Image (3.0 MB)
-     * LandsatLook "Quality" Image (428.7 KB)
-     * LandsatLook images with Geographic Reference (10.8 MB)
-     * Level 1 GeoTIFF Data Product (862.4 MB) 
+     * LandsatLook "Natural Color" Image (7.4 MB),
+     * LandsatLook "Thermal" Image (3.0 MB),
+     * LandsatLook "Quality" Image (428.7 KB),
+     * LandsatLook images with Geographic Reference (10.8 MB),
+     * Level 1 GeoTIFF Data Product (862.4 MB). 
      
 Необходимо скачать самый большой архив, т.к. в нем содержаться ДДЗ только с 
 выполненной предварительной радиометрической и геометрической коррекцией.      

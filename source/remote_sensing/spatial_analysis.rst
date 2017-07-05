@@ -11,13 +11,13 @@
 Для расчета вегетационных индексов используются красный и инфракрасный каналы [#f1]_.
 Для получения индексов используется инструмент SAGA **"Vegetation index (slope based)"**. Он позволяет рассчитывать:
     
-    * Normalized Difference Vegetation Index
-    * Ratio Vegetation Index
-    * Normalized Ratio Vegetation Index
-    * Transformed Vegetation Index
-    * Corrected Transformed Vegetation Index
-    * Thiam's Transformed Vegetation Index
-    * Soil Adjasted Vegetation Index
+    * Normalized Difference Vegetation Index,
+    * Ratio Vegetation Index,
+    * Normalized Ratio Vegetation Index,
+    * Transformed Vegetation Index,
+    * Corrected Transformed Vegetation Index,
+    * Thiam's Transformed Vegetation Index,
+    * Soil Adjasted Vegetation Index.
 
 Для активации инструмента необходимо открыть панель "Инструменты анализа" 
 (:menuselection:`Анализ данных --> Панель инструментов`). В панели инструментов 
