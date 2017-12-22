@@ -1,9 +1,9 @@
 .. NextGIS QGIS
 
-Курс QGIS
-=========
+Введение в NextGIS QGIS
+==========================
 
 Содержание:
-    
+
 .. toctree::
    :maxdepth: 2

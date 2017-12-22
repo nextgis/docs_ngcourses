@@ -3,15 +3,18 @@
 .. NextGIS Cources TOC
 
 Курс по ГИС
-===========
+==============
+
+Курс по :term:`ГИС` представляет собой набор учебный модулей. Ниже представлен
+перечень доступных модулей.
 
 Содержание:
-    
+
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
 
-   qgis/index
+   ng_intro/index
    remote_sensing/index
-   web_gis/index
 
-
+..   web_gis/index
+..   qgis/index
