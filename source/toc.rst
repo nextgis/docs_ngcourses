@@ -11,10 +11,13 @@
 Содержание:
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
 
    ng_intro/index
    remote_sensing/index
+
+
+
 
 ..   web_gis/index
 ..   qgis/index
