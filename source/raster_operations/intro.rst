@@ -8,7 +8,14 @@
 Настоящий курс предназначен для начинающих пользователей и охватывает различные
 аспекты работы с растровыми слоями в NextGIS QGIS
 
+Провайдеры бесплатных снимков
+================================
 
+1. http://earthexplorer.usgs.gov/
+2. https://astrodigital.com/
+3. https://libra.developmentseed.org/
+4. https://docs.opendata.aws/landsat-pds/readme.html
+5. http://sentinel-pds.s3-website.eu-central-1.amazonaws.com/
 
 vrt
 ========
