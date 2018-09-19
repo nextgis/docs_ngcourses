@@ -14,6 +14,7 @@
    :maxdepth: 2
 
    ng_intro/index
+   qgis/index
    raster_operations/index
    remote_sensing/index
 
