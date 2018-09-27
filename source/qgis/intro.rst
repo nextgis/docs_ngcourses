@@ -503,6 +503,21 @@ The snapping distance (black circle) is defined in map units (e.g. decimal degre
 Snapping distance and search radius are both set in map units so you may need to experiment to get the distance value set right. If you specify a value that is too big, the GIS may snap to a wrong vertex, especially if you are dealing with a large number of vertices close together. If you specify the search radius too small the GIS application won’t find any feature or vertex to move or edit.
 
 
+Задание: рисуем переписные участки
+-----------------------------------
+
+Вводная:  это пример задачи из реальной жизни, данные упрощены и изменены.
+
+Учебные данные: точечный слой из точек на домах в городском районе. У точки есть номер участка
+
+1. Настраиваем у слоя стиль из случайных цветов
+2. Подкладываем подложку OSM
+3. Создаём новый полигональный слой.
+4. Включаем топологическое редактирование, обрисовываем слой. Нужно 5 объектов.
+5. Проверяем геометрию полигонального слоя.
+6. Разбираемся с ошибками, если они будут.
+
+
 Подведём итоги:
 
     Топология описывает пространственные взаимотношения соседних векторных объектов.
@@ -769,6 +784,7 @@ Snapping distance and search radius are both set in map units so you may need to
 2. Генерируем сетку в 4326 - получается сплющенной.
 3. Генерируем сетку в 32637, она получается квадратной, но повёрнутой.
 
+Так же есть статья http://docs.nextgis.ru/docs_howto/source/grid_vertex_extract.html
 
 
 Модуль Geoprocessing
