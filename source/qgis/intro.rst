@@ -495,10 +495,10 @@ https://docs.qgis.org/2.14/en/_images/snapping_distance.png
 
 The snapping distance (black circle) is defined in map units (e.g. decimal degrees) for snapping to either vertices or segments.
 
-Проблемы
------------
 
-Search radius is the distance a GIS uses to search for the closest vertex you are trying to move when you click on the map. If you aren’t within the search radius, the GIS won’t find and select any vertex of a feature for editing. In principle, it is quite similar to the snapping distance functionality.
+
+Расстояние прилипания
+---------------------------
 
 Snapping distance and search radius are both set in map units so you may need to experiment to get the distance value set right. If you specify a value that is too big, the GIS may snap to a wrong vertex, especially if you are dealing with a large number of vertices close together. If you specify the search radius too small the GIS application won’t find any feature or vertex to move or edit.
 
