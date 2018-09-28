@@ -261,6 +261,44 @@ TMS, WMS, WMTS, ESRI ArcGIS Service или просто в виде тайлов
 Импорт из Excel.
 ================================
 
+В реальной жизни вам часто будут встречаться данные из внешних систем, которые поставляются в электронных таблицах.
+
+
+Учебные данные:
+1. Таблица odf/xls: название субъекта РФ, количество населения, количество фирм из wikidata, относительное количество фирм.
+
+Получено с query.wikidata.com
+
+SELECT
+	?state ?stateLabel
+	?companies
+	?population
+	(?companies/?population*1000000 AS ?companiesPerM)
+WHERE
+{
+	{ SELECT ?state (count(*) as ?companies) WHERE {
+		{SELECT DISTINCT ?company ?state WHERE {
+			?state wdt:P31/wdt:P279* wd:Q43263 .
+			?company wdt:P31/wdt:P279* wd:Q4830453 .
+			?company wdt:P159/wdt:P131* ?state .
+			FILTER NOT EXISTS{ ?company wdt:P576 ?date } # don't count dissolved companies
+		} }
+	} GROUP BY ?state  }
+    ?state wdt:P1082 ?population
+	SERVICE wikibase:label { bd:serviceParam wikibase:language "ru" }
+}
+ORDER BY DESC(?companiesPerM)
+
+
+1. Взять из учебных данных odf
+2. В Excel/Calc открыть электронную таблицу, сохранить как csv - текст с разделителями. UTF-8, разделитель - любой.
+3. QGIS, слой --> Добавить слой из файла с разделителями --> без геометрии
+4. добавить из QMS Regions of Russia set 2
+5. Свойства слоя с геометрией - joins. Выбрать для связи поля с названиями.
+6. Некоторые записи не привяжутся, потому что жизнь - борьба.
+
+
+
 Добавление слоёв CSV
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -525,6 +563,9 @@ Snapping distance and search radius are both set in map units so you may need to
 Вводная:  это пример задачи из реальной жизни, данные упрощены и изменены.
 
 Учебные данные: точечный слой из точек на домах в городском районе. У точки есть номер участка
+
+http://trolleway.nextgis.com/resource/2941
+
 
 1. Настраиваем у слоя стиль из случайных цветов
 2. Подкладываем подложку OSM
