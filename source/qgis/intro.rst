@@ -264,38 +264,6 @@ TMS, WMS, WMTS, ESRI ArcGIS Service или просто в виде тайлов
 В реальной жизни вам часто будут встречаться данные из внешних систем, которые поставляются в электронных таблицах.
 
 
-Учебные данные:
-1. Таблица odf/xls: название субъекта РФ, количество населения, количество фирм из wikidata, относительное количество фирм.
-
-Получено с query.wikidata.com
-
-SELECT
-	?state ?stateLabel
-	?companies
-	?population
-	(?companies/?population*1000000 AS ?companiesPerM)
-WHERE
-{
-	{ SELECT ?state (count(*) as ?companies) WHERE {
-		{SELECT DISTINCT ?company ?state WHERE {
-			?state wdt:P31/wdt:P279* wd:Q43263 .
-			?company wdt:P31/wdt:P279* wd:Q4830453 .
-			?company wdt:P159/wdt:P131* ?state .
-			FILTER NOT EXISTS{ ?company wdt:P576 ?date } # don't count dissolved companies
-		} }
-	} GROUP BY ?state  }
-    ?state wdt:P1082 ?population
-	SERVICE wikibase:label { bd:serviceParam wikibase:language "ru" }
-}
-ORDER BY DESC(?companiesPerM)
-
-
-1. Взять из учебных данных odf
-2. В Excel/Calc открыть электронную таблицу, сохранить как csv - текст с разделителями. UTF-8, разделитель - любой.
-3. QGIS, слой --> Добавить слой из файла с разделителями --> без геометрии
-4. добавить из QMS Regions of Russia set 2
-5. Свойства слоя с геометрией - joins. Выбрать для связи поля с названиями.
-6. Некоторые записи не привяжутся, потому что жизнь - борьба.
 
 
 
@@ -389,12 +357,67 @@ ORDER BY DESC(?companiesPerM)
    2, 79 28 52 N, 53 00 00 E
    3, 79 28 52 N, 61 33 03 E
 
+
+Задание
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+Учебные данные:
+1. Таблица odf/xls: название субъекта РФ, количество населения, количество фирм из wikidata, относительное количество фирм.
+
+Получено с query.wikidata.com
+
+SELECT
+	?state ?stateLabel
+	?companies
+	?population
+	(?companies/?population*1000000 AS ?companiesPerM)
+WHERE
+{
+	{ SELECT ?state (count(*) as ?companies) WHERE {
+		{SELECT DISTINCT ?company ?state WHERE {
+			?state wdt:P31/wdt:P279* wd:Q43263 .
+			?company wdt:P31/wdt:P279* wd:Q4830453 .
+			?company wdt:P159/wdt:P131* ?state .
+			FILTER NOT EXISTS{ ?company wdt:P576 ?date } # don't count dissolved companies
+		} }
+	} GROUP BY ?state  }
+    ?state wdt:P1082 ?population
+	SERVICE wikibase:label { bd:serviceParam wikibase:language "ru" }
+}
+ORDER BY DESC(?companiesPerM)
+
+
+1. Взять из учебных данных odf
+2. В Excel/Calc открыть электронную таблицу, сохранить как csv - текст с разделителями. UTF-8, разделитель - любой.
+3. QGIS, слой --> Добавить слой из файла с разделителями --> без геометрии
+4. добавить из QMS Regions of Russia set 2
+5. Свойства слоя с геометрией - joins. Выбрать для связи поля с названиями.
+6. Некоторые записи не привяжутся, потому что жизнь - борьба.
+
+
     Открываем Excel, придумываем таблицу с широтой в градусах.
     Пишем формулу перевода из градусов в DMS. Пример формата: 46°01’24,7”;11°13’47,5”
+    
+    
+    
 
 
-Импорт из postgis
+Импорт из wms
 ================================
+
+It's an OGC standard for serving up map images over HTTP. Работает он так: вам нужно знать адрес сервера. Вы вводите его в программу. Программа отправляет по адресу HTTP-запрос с магическим словом GetCapabiities, и получает с сервера список названий слоёв. Затем, при каждом перемещении карты, клиент отправляет на сервер запрос с указанием охвата и перечислением выбранных слоёв, а в ответ получает картинку в png или jpeg.
+
+Задание
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+Найти адрес wms кадастра, и подложить
+
+1. Найти в интернете публичную кадастровую карту Росреестра.
+2. Найти wms Росреестра
+3. QGIS Слой --> Добавить слой WMS --> Создать подключение. Вставить URL, получить список, выбрать в нём все слои
+4. Переместить карту на Москву, должно нарисоваться кадастровое деление.
+5. Если не работает, то это проблемы на сервере ПКК
+
 
 Открываем базу с гис-лаба где лежат выгрузки, её адрес написан в статье на гис-лабе где разграфки лежат.
 это надо перенести
