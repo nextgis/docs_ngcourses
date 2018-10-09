@@ -17,6 +17,7 @@
    qgis/index
    raster_operations/index
    remote_sensing/index
+   grass_intro/index
 
 
 

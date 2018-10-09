@@ -9,4 +9,6 @@
    :maxdepth: 2
 
    introGRASS
+   createLocation
+   introTopology
 
