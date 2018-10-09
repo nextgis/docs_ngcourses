@@ -50,34 +50,34 @@
 Создание области из командной строки
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-```
-grass70 [-c | -c geofile | -c EPSG:code[:datum_trans]]
-          [-e] [-text | -gui] [--config param]
-          [[[<GISDBASE>/]<LOCATION_NAME>/]<MAPSET>]
+.. code:: bash
 
-Flags:
-  -h or -help or --help      print this help message
-  -v or --version            show version information and exit
-  -c                         create given database, location or mapset if it doesn't exist
-  -e                         exit after creation of location or mapset. Only with -c flag
-  -text                      use text based interface (skip welcome screen)
-                               and set as default
-  -gtext                     use text based interface (show welcome screen)
-                               and set as default
-  -gui                       use wxpython graphical user interface
-                               and set as default
-  --config                   print GRASS configuration parameters
-                               options: arch,build,compiler,path,revision
+    grass70 [-c | -c geofile | -c EPSG:code[:datum_trans]]
+              [-e] [-text | -gui] [--config param]
+              [[[<GISDBASE>/]<LOCATION_NAME>/]<MAPSET>]
 
-Parameters:
-  GISDBASE                   initial database (path to GIS data)
-  LOCATION_NAME              initial location
-  MAPSET                     initial mapset
-```
+    Flags:
+      -h or -help or --help      print this help message
+      -v or --version            show version information and exit
+      -c                         create given database, location or mapset if it doesn't exist
+      -e                         exit after creation of location or mapset. Only with -c flag
+      -text                      use text based interface (skip welcome screen)
+                                   and set as default
+      -gtext                     use text based interface (show welcome screen)
+                                   and set as default
+      -gui                       use wxpython graphical user interface
+                                   and set as default
+      --config                   print GRASS configuration parameters
+                                   options: arch,build,compiler,path,revision
+
+    Parameters:
+      GISDBASE                   initial database (path to GIS data)
+      LOCATION_NAME              initial location
+      MAPSET                     initial mapset
 
 Пример создадим область с системой координат и пространственным охватом, совпадающим с системой координат и охватом шейпфайла `My_file.shp`:
 
-```
-grass -c My_file.shp -e ~/home/GRASSDATA/MyLocation/PERMANENT
-```
+.. code:: bash
+
+    grass -c My_file.shp -e ~/home/GRASSDATA/MyLocation/PERMANENT
 
