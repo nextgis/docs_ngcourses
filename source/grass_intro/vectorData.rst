@@ -6,15 +6,23 @@
 
 [Свыше 100 модулей для обработки векторных данных:](https://grass.osgeo.org/grass70/manuals/vector.html). *На самом деле трудно посчитать сколько модулей работает с векторными данными, упоминаемые 100 модулей относятся к классу `v.xxx` модулей.*
 
-Класс                    |ссылка
++-------------------------+----------------------------------------------------------+
+|Класс                    |ссылка                                                    |
 -------------------------|-----------------------------
-Импорт/экспорт           | [v.import](https://grass.osgeo.org/grass70/manuals/v.import.html), [v.in.ogr](https://grass.osgeo.org/grass70/manuals/v.in.ogr.html), [v.out.ogr](https://grass.osgeo.org/grass70/manuals/v.out.ogr.html), ...
-Работа с атрибутами      | [v.db.addtable](https://grass.osgeo.org/grass70/manuals/v.db.addtable.html), [v.db.select](https://grass.osgeo.org/grass70/manuals/v.db.select.html), [v.db.update](https://grass.osgeo.org/grass70/manuals/v.db.update.html), ...
-"Стандартные" ГИС-операции | [v.buffer](https://grass.osgeo.org/grass70/manuals/v.buffer.html), [v.hull](https://grass.osgeo.org/grass70/manuals/v.hull.html), [v.overlay](https://grass.osgeo.org/grass70/manuals/v.overlay.html), [v.select](v.select), ...
-Редактирование           | [v.edit](https://grass.osgeo.org/grass70/manuals/v.edit.html)
-Сети                     | v.net.*
-Линейные референсные системы | v.lrs.*
-...                      | ...
+|Импорт/экспорт           | [v.import](https://grass.osgeo.org/grass70/manuals/v.import.html), [v.in.ogr](https://grass.osgeo.org/grass70/manuals/v.in.ogr.html), [v.out.ogr](https://grass.osgeo.org/grass70/manuals/v.out.ogr.html), ...                    |
++-------------------------+----------------------------------------------------------+
+|Работа с атрибутами      | [v.db.addtable](https://grass.osgeo.org/grass70/manuals/v.db.addtable.html), [v.db.select](https://grass.osgeo.org/grass70/manuals/v.db.select.html), [v.db.update](https://grass.osgeo.org/grass70/manuals/v.db.update.html), ...|
++-------------------------+----------------------------------------------------------+
+|"Стандартные" ГИС-операции | [v.buffer](https://grass.osgeo.org/grass70/manuals/v.buffer.html), [v.hull](https://grass.osgeo.org/grass70/manuals/v.hull.html), [v.overlay](https://grass.osgeo.org/grass70/manuals/v.overlay.html), [v.select](v.select), ...|
++-------------------------+----------------------------------------------------------+
+|Редактирование           | [v.edit](https://grass.osgeo.org/grass70/manuals/v.edit.html)|
++-------------------------+----------------------------------------------------------+
+|Сети                     | v.net.*                                                  |
++-------------------------+----------------------------------------------------------+
+|Линейные референсные системы | v.lrs.*                                              |
++-------------------------+----------------------------------------------------------+
+|...                      | ...                                                      |
++-------------------------+----------------------------------------------------------+
 
 
 
@@ -33,10 +41,11 @@
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-```bash
+```
 v.clean input=name output=name [type=string[,string,...]]
     [error=name] tool=string[,string,...] [thresh=float[,float,...]]
 ```
+
 * input: название входной векторной карты, для которой проверяется/чистится топология
 * output: название выходной векторной карты, в которой сохраняется результат
 * type: тип объектов, которы обрабатываются (point, line, boundary, centroid, area, face, kernel). По умолчанию: point, line, boundary, centroid, area
@@ -62,28 +71,32 @@ v.clean input=name output=name [type=string[,string,...]]
 * rmsa: Удаление "щелей":
 
 <img src="img/v_clean_rmsa.png" width=400 />
+ .. figure:: img/v_clean_rmsa.png
+    :name: grass_clean_rmsa
+    :align: center
+
+
 
 Генерализация инструментами GRASS GIS
 -------------------------------------
 
 * Генерализация в момент импорта данных (уделение полигонов меньших заданого порога, "прищелкивание" узлов):
 
-```bash
+```
     v.in.ogr -e dsn=regions2010.shp out=regions
     min_area=1 snap=100
 ```
 
 * v.clean:
 
-```bash
+```
     v.clean in=regions out=sipmle type=boundary
     tool=prune,rmarea thresh=2000,4000000
 ```
 
 * v.generalize: специальный инструмент генерализации:
 
-```bash
-
+```
     v.generalize input=name output=name
     [type=string[,string,...]]
     method=string threshold=float
