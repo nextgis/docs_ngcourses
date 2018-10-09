@@ -10,6 +10,7 @@ GRASS: Geographic Resources Analysis Support System
  * Хорошо документирована, большие коллекции данных. Коммерческая поддержка.
 
 <img src="img/platforms.png" width=700 />
+.. image:: img/platforms.png
 
 
 GRASS GIS это
