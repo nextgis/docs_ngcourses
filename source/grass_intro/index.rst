@@ -11,4 +11,5 @@
    introGRASS
    createLocation
    introTopology
+   vectorData
 
