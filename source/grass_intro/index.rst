@@ -12,4 +12,5 @@
    createLocation
    introTopology
    vectorData
+   rasterData
 
