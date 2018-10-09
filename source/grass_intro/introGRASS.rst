@@ -9,9 +9,7 @@ GRASS: Geographic Resources Analysis Support System
  * Кроссплатформенная: доступны версии для GNU/Linux, MS-Windows, Mac OSX, SUN, ...; 32/64 битные системы.
  * Хорошо документирована, большие коллекции данных. Коммерческая поддержка.
 
-.center[
 <img src="img/platforms.png" width=700 />
-]
 
 
 GRASS GIS это
@@ -61,7 +59,7 @@ GRASS GIS это
 Устройство GRASS: БД, область, набор
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.center[<img src="img/help_loc_struct.png" width=350  />]
+<img src="img/help_loc_struct.png" width=350  />
 * Строгая иерархия данных:
 
   * «База данных» (GISDBASE / database) — не настоящая БД, а набор директорий и файлов.
@@ -76,7 +74,7 @@ GRASS GIS это
 
 1. Запустите GRASS 7 с интерфейсом wxGUI.
 
-.center[<img src="img/wxGUI_start.png" width=500  />]
+<img src="img/wxGUI_start.png" width=500  />
 
 * Всегда первым появляется окно терминала, т.к. GRASS запускается через интерпретатор командной строки (bash, CMD.EXE и т.п.)
 * Затем запускается граф. интерфейс
@@ -87,7 +85,7 @@ GRASS GIS это
 * Командная строка (CLI) — основной метод работы с GRASS (исторически и в силу специфики), графический интерфейс (GUI) — «надстройка»
 
 * Графичеcкий интерфейс пользователя — **wxGUI** — основан на wxPython.
-.center[<img src="img/GUI_v2.png" width=700  />]
+<img src="img/GUI_v2.png" width=700  />
 
 * Окно менеджера слоев (1-4):
   1. Дерево слоев
