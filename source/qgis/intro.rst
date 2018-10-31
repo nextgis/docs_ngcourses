@@ -1035,7 +1035,8 @@ http://trolleway.nextgis.com/resource/2941
 
     Данные вида Simple feature не являются настоящим топологически корректным форматом данных, но широко применяются в ГИС-приложениях.
 
-
+.. note:: Why did the chicken cross the road?
+The topology allows it
 
 Операции с проекциями.
 ================================
