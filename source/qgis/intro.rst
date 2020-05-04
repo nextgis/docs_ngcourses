@@ -33,16 +33,18 @@ Here are only some of the reasons:
 
     It’s free, as in lunch. Installing and using the QGIS program costs you a grand total of zero money. No initial fee, no recurring fee, nothing.
     It’s free, as in liberty. If you need extra functionality in QGIS, you can do more than just hope it will be included in the next release. You can sponsor the development of a feature, or add it yourself if you are familiar with programming.
-    It’s constantly developing. Because anyone can add new features and improve on existing ones, QGIS never stagnates. The development of a new tool can happen as quickly as you need it to. ВОТ Я ЭТО НЕФТЯННИКАМ СКАЗАЛ, А ОНИ СРАЗУ - ЭТО НЕ ТРУ, ЗНАЧИТ ОНО НЕДОДЕЛАНО. НУ ВОТ ЧТО ТАКИМ ОТВЕТИТЬ?
+    It’s constantly developing. Because anyone can add new features and improve on existing ones, QGIS never stagnates. The development of a new tool can happen as quickly as you need it to. 
     Extensive help and documentation is available. If you’re stuck with anything, you can turn to the extensive documentation, your fellow QGIS users, or even the developers.
     Cross-platform. QGIS can be installed on MacOS, Windows and Linux.
+
+.. todo:: ВОТ Я ЭТО НЕФТЯННИКАМ СКАЗАЛ, А ОНИ СРАЗУ - ЭТО НЕ ТРУ, ЗНАЧИТ ОНО НЕДОДЕЛАНО. НУ ВОТ ЧТО ТАКИМ ОТВЕТИТЬ?
 
 Now that you know why you want to use QGIS, we can show you how. The first lesson will guide you in creating your first QGIS map.
 https://docs.qgis.org/2.14/en/docs/training_manual/introduction/intro.html cc-by-sa
 
-мы делаем кугис
-это российский софт
-ВЗЯТЬ ТЕКСТ ИЗ МОЕЙ ПРЕЗЕНТАЦИИ
+.. todo:: мы делаем кугис
+.. todo:: это российский софт
+.. todo:: ВЗЯТЬ ТЕКСТ ИЗ МОЕЙ ПРЕЗЕНТАЦИИ
 
 Начальные настройки qgis
 ------------------------------------------
@@ -99,12 +101,12 @@ Right-clicking on a layer will give you a menu with lots of extra options. You w
 Карта
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Что про неё можно сказать? Ну это надо взять из документации какой-нибудь умной. Ещё тут надо проверить включено ли мультипоточный редеринг, хотя это не к месту, и вообще не понятно что тут писать.
+.. todo:: Что про неё можно сказать? Ну это надо взять из документации какой-нибудь умной. Ещё тут надо проверить включено ли мультипоточный редеринг, хотя это не к месту, и вообще не понятно что тут писать.
 
-панель состояния.
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. todo:: Панель состояния.
+.. todo:: ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-она будет рассмотрена ниже
+.. todo:: она будет рассмотрена ниже
 
 Операции на файловом уровне
 ------------------------------------------
